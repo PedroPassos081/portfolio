@@ -1,0 +1,200 @@
+@use 'variaveis';
+
+.section1 {
+    align-items: flex-start;
+    color: variaveis.$cor-branco;
+    padding: 324px 0 100px;
+    background-color: variaveis.$cor-cinza-fundo2;
+    margin: 0 auto;
+
+    @media (max-width: 480px) {
+        padding: 30px 0 0;
+
+        .img-boneca {
+            text-align: center;
+            margin-top: 70px;
+        }
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        padding: 30px 0 0;
+
+        .img-boneca {
+            text-align: center;
+            margin-top: 70px;
+        }
+    }
+
+    img {
+        width: 500px;
+
+        @media (max-width: 480px) {
+            width: 250px;
+            //margin-top: 70px;
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            width: 250px;
+        }
+    }
+
+    #typed-text {
+        font-size: 50px;
+        background-image: linear-gradient(to right, variaveis.$cor-azul1, variaveis.$cor-azul2);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        white-space: nowrap; /* Evita quebra de linha */
+        overflow: hidden; /* Esconde texto além da largura do elemento */
+        // border-right: .15em solid variaveis.$cor-branco; /* Simula o cursor de digitação */
+
+        @media (max-width: 480px) {
+            font-size: 36px;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            line-height: 40px;
+            min-height: 80px;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            font-size: 36px;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            line-height: 46px;
+            min-height: 80px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1240px;
+        width: 100%;
+        margin: 0 auto;
+
+        @media (max-width: 480px) {
+            display: block;
+            padding: 40px 30px 30px;
+
+            .saudacao {
+                text-align: center;
+                //align-items: center;
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            display: block;
+            padding: 40px 30px 30px;
+
+            .saudacao {
+                text-align: center;
+            }
+        }
+    }
+
+    .botao {
+        padding: 11px 8px 8px;
+        border-radius: 30px;
+        border: 2px solid variaveis.$cor-branco;
+        background-color: variaveis.$cor-cinza-fundo1;
+        width: 200px;
+        margin-top: 35px;
+        height: 40px;
+        transition: all .7s ease;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        color: variaveis.$cor-branco;
+        letter-spacing: 2px;
+        align-items: center;
+
+        @media (max-width: 480px) {
+            font-size: 12px;
+            margin: auto;
+            width: 140px;
+            padding: 5px 3px 4px;
+            height: 30px;
+            border: 1px solid variaveis.$cor-branco;
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            font-size: 12px;
+            margin: auto;
+            width: 140px;
+            padding: 5px 3px 4px;
+            height: 30px;
+            border: 1px solid variaveis.$cor-branco;
+        }
+
+        &:hover {
+            background-color: variaveis.$cor-preto;
+        }
+    }
+
+    p {
+        font-size: 24px;
+        margin-bottom: 18px;
+
+        @media (max-width: 480px) {
+            font-size: 18px;
+            line-height: 25px;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            font-size: 20px;
+            line-height: 27px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__setas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1240px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 250px;
+
+        @media (max-width: 480px) {
+            padding-top: 0;
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            padding-top: 0;
+        }
+
+        &__img {
+            height: 50px;
+            max-width: 50px;
+            animation: float 2.5s infinite;
+
+            @media (max-width: 480px) {
+                height: 32px;
+                max-width: 32px;
+                margin: 40px 0 240px;
+            }
+
+            @media (min-width: 481px) and (max-width: 767px) {
+                height: 32px;
+                max-width: 32px;
+                margin: 70px 0 200px;
+            }
+        }
+    }
+
+    @keyframes float {
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px); /* Altura que o balão sobe */
+        }
+    }
+}
