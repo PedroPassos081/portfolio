@@ -41,12 +41,12 @@ let saibaMais = document.querySelectorAll(".saiba-mais")
     code: "https://github.com/PedroPassos081/pomodoro",
     deploy: "https://pomodoro-tau-dusky.vercel.app/"
 }, {
-    title: "Jogo número secreto",
-    src: "./dist/images/projeto_numero_secreto.png",
-    text: "Jogo com comando de voz, onde você chuta um número entre 0 e 1000 e ele vai dizendo se é maior ou menor até acertar o número",
-    tech: "Feito com: Git, JS, CSS3 e HTML5.",
-    code: "https://github.com/PedroPassos081/jogo-numero-secreto",
-    deploy: "https://jogo-numero-secreto-five-beta.vercel.app/"
+    title: "Página com artigos",
+    src: "./dist/images/projeto_artigos.png",
+    text: "Página criada com afinalidade de aprendizado sobre diversos artigos de tecnologias ",
+    tech: "Feito com: React, JS, Git.",
+    code: "https://github.com/PedroPassos081/ola-mundo",
+    deploy: "https://ola-mundo-phi-liard.vercel.app/"
 }, {
     title: "Landing Page AlphaFit",
     src: "./dist/images/projeto_alphafit.png",
