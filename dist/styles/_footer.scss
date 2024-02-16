@@ -3,9 +3,11 @@
 .footer {
     background-color: variaveis.$cor-cinza-fundo1;
     padding: 30px;
+    padding-bottom: 0;
 
     @media (max-width: 480px) {
         padding: 30px;
+        padding-bottom: 0;
     }
 
     &__container {

@@ -1073,10 +1073,12 @@
 .footer {
   background-color: #303030;
   padding: 30px;
+  padding-bottom: 0;
 }
 @media (max-width: 480px) {
   .footer {
     padding: 30px;
+    padding-bottom: 0;
   }
 }
 .footer__container {
