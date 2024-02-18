@@ -161,7 +161,7 @@
 .section_inicio {
   align-items: flex-start;
   color: #f1f1f1;
-  padding: 240px 0 60px;
+  padding: 190px 0 60px;
   background-color: #1d1d1d;
 }
 @media (max-width: 480px) {
@@ -316,7 +316,7 @@
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 140px;
+  padding-top: 80px;
 }
 @media (max-width: 480px) {
   .section_inicio__setas {

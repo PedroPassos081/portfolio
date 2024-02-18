@@ -3,7 +3,7 @@
 .section_inicio {
     align-items: flex-start;
     color: variaveis.$cor-branco;
-    padding: 240px 0 60px;
+    padding: 190px 0 60px;
     background-color: variaveis.$cor-cinza-fundo2;
 
     @media (max-width: 480px) {
@@ -158,7 +158,7 @@
         max-width: 1240px;
         width: 100%;
         margin: 0 auto;
-        padding-top: 140px;
+        padding-top: 80px;
 
         @media (max-width: 480px) {
             padding-top: 0;
