@@ -21,6 +21,7 @@ html {
 body {
     background-color: variaveis.$cor-cinza-fundo2;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
