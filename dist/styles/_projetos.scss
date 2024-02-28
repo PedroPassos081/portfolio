@@ -3,7 +3,7 @@
 .section4 {
     background-color: variaveis.$cor-cinza-fundo1;
     padding: 100px 0;
-
+    
     @media (max-width: 480px) {
         padding: 50px 30px;
     }
@@ -12,7 +12,7 @@
         width: 100%;
         max-width: 1240px;
         margin: 0 auto;
-
+        
         &__title {
             display: flex;
             flex-direction: column;
