@@ -1,277 +1,337 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedro Passos | Desenvolvedor Front-End</title>
-    <link rel="stylesheet" href="./dist/styles/main.css">
-    <link rel="icon" href="./dist/images/favicon (1).ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pedro Passos | Desenvolvedor Front-End</title>
+        <link rel="stylesheet" href="./dist/styles/main.css">
+        <link rel="icon" href="./dist/images/favicon (1).ico"
+            type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
 
-<body>
-    <header class="header">
-        <div class="header__container">
-            <a class="header__title" href="" id="inicio"> <span>
-                    < Pedro Passos />
-                </span> </a>
-            <nav class="header__nav">
-                <ul class="primary-navgation">
-                    <li class="header__li">
-                        <a id="inicio" href="">Início</a>
-                    </li>
-                    <li class="header__li">
-                        <a href="#sobre">Sobre Mim</a>
-                    </li>
-                    <li class="header__li">
-                        <a href="#habilidades">Habilidades</a>
-                    </li>
-                    <li class="header__li">
-                        <a href="#projetos">Projetos</a>
-                    </li>
-                    <li class="header__li">
-                        <a href="#contato">Contato</a>
-                    </li>
-                </ul>
-                <i class="fa-solid fa-bars"></i>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <button id="inicio" class="voltar-ao-topo">
-            <img class="arrow" src="./dist/images/seta_branca.png" alt="button-back-home">
-        </button>
-    </main>
-
-    <section class="section_inicio hero" id="inicio">
-        <div class="section_inicio__container">
-            <div class="saudacao">
-                <p>Olá!, Me chamo <b>Pedro Passos</b> e eu sou</p>
-                <h1 id="typed-text"></h1>
-                <a class="botao" href="./dist/images/Currículo Pedro Passos.pdf"
-                    download="Pedro_Passos_Curriculo">Download CV</a>
+    <body>
+        <header class="header">
+            <div class="header__container">
+                <a class="header__title" href id="inicio"> <span>
+                        < Pedro Passos />
+                    </span> </a>
+                <nav class="header__nav">
+                    <ul class="primary-navgation">
+                        <li class="header__li">
+                            <a id="inicio" href>Início</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#sobre">Sobre Mim</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#habilidades">Habilidades</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#projetos">Projetos</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                    <i class="fa-solid fa-bars"></i>
+                </nav>
             </div>
-            <div class="img-inicio">
-                <img data-aos="fade-left" data-aos-duration="1500" src="./dist/images/minha_foto_hero.png"
-                    alt="minha foto">
-            </div>
-        </div>
-        <div class="section_inicio__setas">
-            <a href="#sobre">
-                <img class="section_inicio__setas__img" src="./dist/images/seta2.png" alt="Duas setas brancas">
-            </a>
-        </div>
-    </section>
+        </header>
 
-    <section class="section_sobremim" id="sobre">
-        <div class="section_sobremim__title">
-            <h2>Sobre Mim</h2>
-            <h3>Apresentação Pessoal</h3>
-        </div>
-        <div data-aos="flip-up" data-aos-duration="1500" class="section_sobremim__container">
-            <div class="section_sobremim__container__sobre">
-                <div class="section_sobremim__container__sobre__infos">
-                    <div class="section_sobremim__container__sobre__infos__img">
-                        <img src="./dist/images/minha_foto.jpeg" alt="minha foto">
+        <main>
+            <button id="inicio" class="voltar-ao-topo">
+                <img class="arrow" src="./dist/images/seta_branca.png"
+                    alt="button-back-home">
+            </button>
+        </main>
+
+        <section class="section_inicio hero" id="inicio">
+            <div class="section_inicio__container">
+                <div class="saudacao">
+                    <p>Olá!, Me chamo <b>Pedro Passos</b> e eu sou</p>
+                    <h1 id="typed-text"></h1>
+                    <a class="botao"
+                        href="./dist/images/Currículo Pedro Passos.pdf"
+                        download="Pedro_Passos_Curriculo">Download CV</a>
+                </div>
+                <div class="img-inicio">
+                    <img data-aos="fade-left" data-aos-duration="1500"
+                        src="./dist/images/minha_foto_hero.png"
+                        alt="minha foto">
+                </div>
+            </div>
+            <div class="section_inicio__setas">
+                <a href="#sobre">
+                    <img class="section_inicio__setas__img"
+                        src="./dist/images/seta2.png" alt="Duas setas brancas">
+                </a>
+            </div>
+        </section>
+
+        <section class="section_sobremim" id="sobre">
+            <div class="section_sobremim__title">
+                <h2>Sobre Mim</h2>
+                <h3>Apresentação Pessoal</h3>
+            </div>
+            <div data-aos="flip-up" data-aos-duration="1500"
+                class="section_sobremim__container">
+                <div class="section_sobremim__container__sobre">
+                    <div class="section_sobremim__container__sobre__infos">
+                        <div
+                            class="section_sobremim__container__sobre__infos__img">
+                            <img src="./dist/images/minha_foto.jpeg"
+                                alt="minha foto">
+                        </div>
+                        <div class="section_sobremim__container__paragrafo">
+                            <p>Olá, tudo bem? Sou formado em Análise e
+                                Desenvolvimento de Sistemas pela UNIFG e estou
+                                muito feliz por estar aqui.</p>
+
+                            <p>Minha jornada na programação começou em 2022,
+                                quando iniciei meu curso de ADS. Durante a
+                                formação, adquiri uma base
+                                sólida em lógica de programação e aprendi o
+                                essencial de diversas linguagens, como Python e
+                                Java. Foi então que me
+                                apaixonei pela área e decidi que a programação
+                                seria minha carreira. </p>
+
+                            <p>Com foco em me tornar um programador front-end,
+                                comecei a estudar HTML, CSS e JavaScript. Em
+                                seguida, aprofundei meus
+                                conhecimentos em frameworks como React e
+                                Node.js. Hoje, sou um desenvolvedor apaixonado
+                                por tecnologia e sempre busco
+                                aprimorar minhas habilidades e acompanhar as
+                                novidades do setor.</p>
+
+                            <p>Veja abaixo alguns projetos que realizei para
+                                colocar em prática meus conhecimentos!</p>
+                        </div>
+
                     </div>
-                    <div class="section_sobremim__container__paragrafo">
-                        <p>Olá, tudo bem? Sou formado em Análise e Desenvolvimento de Sistemas pela UNIFG e estou muito feliz por estar aqui.</p>
+                </div>
+            </div>
+        </section>
 
-                        <p>Minha jornada na programação começou em 2022, quando iniciei meu curso de ADS. Durante a formação, adquiri uma base 
-                            sólida em lógica de programação e aprendi o essencial de diversas linguagens, como Python e Java. Foi então que me 
-                            apaixonei pela área e decidi que a programação seria minha carreira. </p>
+        <section class="section3" id="habilidades">
+            <div class="section3__container">
+                <div class="section3__container__title">
+                    <h2>Habilidades</h2>
+                    <h3>Conhecimentos Técnicos</h3>
+                </div>
+                <div data-aos="flip-up" data-aos-duration="1500"
+                    class="section1__container__grid">
+                    <ul>
+                        <li>
+                            <img src="./dist/images/html-5.png" alt="HTML5">
+                            <span>HTML</span>
+                        </li>
+                        <li>
+                            <img src="./dist/images/css-3.png" alt="CSS3">
+                            <span>CSS</span>
+                        </li>
+                        <li>
+                            <img src="./dist/images/bootstrap_logo.svg"
+                                alt="Bootstrap">
+                            <span>Bootstrap</span>
+                        </li>
+                        <li>
+                            <img src="./dist/images/sass_logo.png" alt="SASS">
+                            <span>SASS</span>
+                        </li>
 
-                        <p>Com foco em me tornar um programador front-end, comecei a estudar HTML, CSS e JavaScript. Em seguida, aprofundei meus 
-                            conhecimentos em frameworks como React e Node.js. Hoje, sou um desenvolvedor apaixonado por tecnologia e sempre busco
-                             aprimorar minhas habilidades e acompanhar as novidades do setor.</p>
+                        <li>
+                            <img src="./dist/images/js.png" alt="JS">
+                            <span>JavaScript</span>
+                        </li>
 
-                        <p>Veja abaixo alguns projetos que realizei para colocar em prática meus conhecimentos!</p>
+                        <li>
+                            <img src="./dist/images/react.png" alt="react">
+                            <span>React</span>
+                        </li>
+
+                        <li>
+                            <img src="./dist/images/git-original.svg" alt="Git">
+                            <span>Git</span>
+                        </li>
+                        <li>
+                            <img src="./dist/images/github.png" alt="GitHub">
+                            <span>GitHub</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section4" id="projetos">
+            <div class="modal">
+                <div class="modal-content">
+                    <img class="fechar" src="./dist/images/fechar.png"
+                        alt="Fechar X">
+                    <div class="infos">
+                        <h2 class="title"></h2>
+                        <p class="text"></p>
+                        <p class="techs"></p>
                     </div>
-
+                    <img src class="modal-img-projeto" alt="print do projeto">
+                    <div class="links">
+                        <a class="button button-github" id="button-github-modal"
+                            target="_blank" href>
+                            <img src="./dist/images/github_logo.png"
+                                alt="Repositório GitHub">
+                            <span>Code</span>
+                        </a>
+                        <a class="button button-deploy" id="button-deploy-modal"
+                            target="_blank" href>
+                            <img src="./dist/images/deploy.png"
+                                alt="Deploy Vercel">
+                            <span>Deploy</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="section3" id="habilidades">
-        <div class="section3__container">
-            <div class="section3__container__title">
-                <h2>Habilidades</h2>
-                <h3>Conhecimentos Técnicos</h3>
-            </div>
-            <div data-aos="flip-up" data-aos-duration="1500" class="section1__container__grid">
-                <ul>
-                    <li>
-                        <img src="./dist/images/html-5.png" alt="HTML5">
-                        <span>HTML</span>
-                    </li>
-                    <li>
-                        <img src="./dist/images/css-3.png" alt="CSS3">
-                        <span>CSS</span>
-                    </li>
-                    <li>
-                        <img src="./dist/images/bootstrap_logo.svg" alt="Bootstrap">
-                        <span>Bootstrap</span>
-                    </li>
-                    <li>
-                        <img src="./dist/images/sass_logo.png" alt="SASS">
-                        <span>SASS</span>
-                    </li>
-
-                    <li>
-                        <img src="./dist/images/js.png" alt="JS">
-                        <span>JavaScript</span>
-                    </li>
-
-                    <li>
-                        <img src="./dist/images/react.png" alt="react">
-                        <span>React</span>
-                    </li>
-
-
-                    <li>
-                        <img src="./dist/images/git-original.svg" alt="Git">
-                        <span>Git</span>
-                    </li>
-                    <li>
-                        <img src="./dist/images/github.png" alt="GitHub">
-                        <span>GitHub</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="section4" id="projetos">
-        <div class="modal">
-            <div class="modal-content">
-                <img class="fechar" src="./dist/images/fechar.png" alt="Fechar X">
-                <div class="infos">
-                    <h2 class="title"></h2>
-                    <p class="text"></p>
-                    <p class="techs"></p>
+            <div class="section4__container">
+                <div class="section4__container__title">
+                    <h2>Projetos</h2>
+                    <h3>Prática & Determinação</h3>
                 </div>
-                <img src="" class="modal-img-projeto" alt="print do projeto">
-                <div class="links">
-                    <a class="button button-github" id="button-github-modal" target="_blank" href="">
-                        <img src="./dist/images/github_logo.png" alt="Repositório GitHub">
-                        <span>Code</span>
+                <div data-aos="flip-up" data-aos-duration="1500"
+                    class="section4__container__projetos">
+                    <div class="section4__container__projetos__projeto">
+                        <img class="img-projeto"
+                            src="./dist/images/menu-digital.png"
+                            alt="Menu virtual">
+                        <button class="projeto saiba-mais" type="button">Saiba
+                            Mais</button>
+                    </div>
+                    <div class="section4__container__projetos__projeto">
+                        <img class="img-projeto"
+                            src="./dist/images/projeto_jogo_memoria.png"
+                            alt="Jogo da Memória, Hora de Aventura">
+                        <button class="projeto saiba-mais" type="button">Saiba
+                            Mais</button>
+                    </div>
+                    <div class="section4__container__projetos__projeto">
+                        <img class="img-projeto"
+                            src="./dist/images/projeto_pomodoro.png"
+                            alt="projeto pomodoro">
+                        <button class="projeto saiba-mais" type="button">Saiba
+                            Mais</button>
+                    </div>
+                    <div class="section4__container__projetos__projeto">
+                        <img class="img-projeto"
+                            src="./dist/images/projeto_artigos.png"
+                            alt="Páginas de artigos">
+                        <button class="projeto saiba-mais" type="button">Saiba
+                            Mais</button>
+                    </div>
+                    <div class="section4__container__projetos__projeto">
+                        <img class="img-projeto"
+                            src="./dist/images/projeto_alphafit.png"
+                            alt="Alpha fit">
+                        <button class="projeto saiba-mais" type="button">Saiba
+                            Mais</button>
+                    </div>
+                    <div class="section4__container__projetos__projeto">
+                        <img class="img-projeto"
+                            src="./dist/images/projeto_advocacia.png"
+                            alt="Site advocacia">
+                        <button class="projeto saiba-mais" type="button">Saiba
+                            Mais</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section5" id="contato">
+            <div class="section5__title">
+                <h2>Contato</h2>
+                <h3>Me mande uma mensagem!</h3>
+            </div>
+            <div data-aos="fade-down" data-aos-duration="1500"
+                class="section5__container">
+                <form class="section5__container__form"
+                    action="https://formsubmit.co/pedro.passos081@gmail.com"
+                    method="POST">
+                    <div class="campos">
+                        <label for="nome">Nome:</label>
+                        <input name="name" type="text" id="nome" required
+                            placeholder="Digite seu nome">
+                    </div>
+                    <div class="campos">
+                        <label for="email">E-mail:</label>
+                        <input name="email" type="email" id="email" required
+                            placeholder="Digite seu e-mail">
+                    </div>
+                    <div class="campos">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea name="message" id="mensagem" required
+                            placeholder="Digite sua mensagem"></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+                <div class="section5__container__redes">
+                    <a href="mailto:pedro.passos081@gmail.com"
+                        class="sociais mb">
+                        <img src="./dist/images/email2.png" alt>
+                        <h3>E-mail</h3>
+                        <p>pedro.passos081@gmail.com</p>
                     </a>
-                    <a class="button button-deploy" id="button-deploy-modal" target="_blank" href="">
-                        <img src="./dist/images/deploy.png" alt="Deploy Vercel">
-                        <span>Deploy</span>
+                    <a href="https://www.linkedin.com/in/pedro-passos081/"
+                        class="sociais mb">
+                        <img src="./dist/images/linkedin.png" alt>
+                        <h3>LinkedIn</h3>
+                        <p>Pedro Passos</p>
+                    </a>
+                    <a href="https://github.com/PedroPassos081" class="sociais">
+                        <img src="./dist/images/github_logo.png" alt>
+                        <h3>GitHub</h3>
+                        <p>PedroPassos081</p>
                     </a>
                 </div>
             </div>
-        </div>
-        <div class="section4__container">
-            <div class="section4__container__title">
-                <h2>Projetos</h2>
-                <h3>Prática & Determinação</h3>
-            </div>
-            <div data-aos="flip-up" data-aos-duration="1500" class="section4__container__projetos">
-                <div class="section4__container__projetos__projeto">
-                    <img class="img-projeto" src="./dist/images/menu-digital.png" alt="Menu virtual">
-                    <button class="projeto saiba-mais" type="button">Saiba Mais</button>
-                </div>
-                <div class="section4__container__projetos__projeto">
-                    <img class="img-projeto" src="./dist/images/projeto_jogo_memoria.png"
-                        alt="Jogo da Memória, Hora de Aventura">
-                    <button class="projeto saiba-mais" type="button">Saiba Mais</button>
-                </div>
-                <div class="section4__container__projetos__projeto">
-                    <img class="img-projeto" src="./dist/images/projeto_pomodoro.png" alt="projeto pomodoro">
-                    <button class="projeto saiba-mais" type="button">Saiba Mais</button>
-                </div>
-                <div class="section4__container__projetos__projeto">
-                    <img class="img-projeto" src="./dist/images/projeto_artigos.png" alt="Páginas de artigos">
-                    <button class="projeto saiba-mais" type="button">Saiba Mais</button>
-                </div>
-                <div class="section4__container__projetos__projeto">
-                    <img class="img-projeto" src="./dist/images/projeto_alphafit.png" alt="Alpha fit">
-                    <button class="projeto saiba-mais" type="button">Saiba Mais</button>
-                </div>
-                <div class="section4__container__projetos__projeto">
-                    <img class="img-projeto" src="./dist/images/projeto_advocacia.png" alt="Site advocacia">
-                    <button class="projeto saiba-mais" type="button">Saiba Mais</button>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section5" id="contato">
-        <div class="section5__title">
-            <h2>Contato</h2>
-            <h3>Me mande uma mensagem!</h3>
-        </div>
-        <div data-aos="fade-down" data-aos-duration="1500" class="section5__container">
-            <form class="section5__container__form" action="https://formsubmit.co/pedro.passos081@gmail.com"
-                method="POST">
-                <div class="campos">
-                    <label for="nome">Nome:</label>
-                    <input name="name" type="text" id="nome" required placeholder="Digite seu nome">
+        <footer class="footer">
+            <div class="footer__container">
+                <a class="footer__container__title" href id="inicio"> <span>
+                        < Pedro Passos />
+                    </span> </a>
+                <p class="footer__container__p1">Me acompanhe nas redes
+                    sociais</p>
+                <div class="footer__container__redes">
+                    <a href="https://www.instagram.com/itspedropassos/"
+                        target="_blank">
+                        <img src="./dist/images/insta.png" alt>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pedro-passos081/"
+                        target="_blank" class="sociais mb">
+                        <img class="linkedin" src="./dist/images/linkedin.png"
+                            alt>
+                    </a>
+                    <a href="https://github.com/PedroPassos081" target="_blank"
+                        class="sociais">
+                        <img src="./dist/images/github_logo.png" alt>
+                    </a>
                 </div>
-                <div class="campos">
-                    <label for="email">E-mail:</label>
-                    <input name="email" type="email" id="email" required placeholder="Digite seu e-mail">
-                </div>
-                <div class="campos">
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea name="message" id="mensagem" required placeholder="Digite sua mensagem"></textarea>
-                </div>
-                <button type="submit">Enviar</button>
-            </form>
-            <div class="section5__container__redes">
-                <a href="mailto:pedro.passos081@gmail.com" class="sociais mb">
-                    <img src="./dist/images/email2.png" alt="">
-                    <h3>E-mail</h3>
-                    <p>pedro.passos081@gmail.com</p>
-                </a>
-                <a href="https://www.linkedin.com/in/pedro-passos081/" class="sociais mb">
-                    <img src="./dist/images/linkedin.png" alt="">
-                    <h3>LinkedIn</h3>
-                    <p>Pedro Passos</p>
-                </a>
-                <a href="https://github.com/PedroPassos081" class="sociais">
-                    <img src="./dist/images/github_logo.png" alt="">
-                    <h3>GitHub</h3>
-                    <p>PedroPassos081</p>
-                </a>
+
             </div>
-        </div>
-    </section>
+        </footer>
 
-    <footer class="footer">
-        <div class="footer__container">
-            <a class="footer__container__title" href="" id="inicio"> <span>
-                    < Pedro Passos />
-                </span> </a>
-            <p class="footer__container__p1">Me acompanhe nas redes sociais</p>
-            <div class="footer__container__redes">
-                <a href="https://www.instagram.com/itspedropassos/" target="_blank">
-                    <img src="./dist/images/insta.png" alt="">
-                </a>
-                <a href="https://www.linkedin.com/in/pedro-passos081/" target="_blank" class="sociais mb">
-                    <img class="linkedin" src="./dist/images/linkedin.png" alt="">
-                </a>
-                <a href="https://github.com/PedroPassos081" target="_blank" class="sociais">
-                    <img src="./dist/images/github_logo.png" alt="">
-                </a>
-            </div>
-
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./main.js"></script>
-</body>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="./main.js"></script>
+    </body>
 
 </html>
