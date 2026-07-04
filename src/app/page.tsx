@@ -4,7 +4,6 @@ import {
   useEffect,
   useRef,
   useState,
-  type FormEvent,
   type ReactNode,
 } from "react";
 import Image from "next/image";
@@ -62,7 +61,7 @@ const COPY = {
         "Graduado em Análise e Desenvolvimento de Sistemas pela UNIFG, com pós-graduação em Desenvolvimento Full-Stack pela FIAP. Aprendizado contínuo faz parte da minha rotina de trabalho.",
       workTitle: "Como eu trabalho",
       work:
-        "Antes de sair codando, gosto de entender o problema, o usuário e o objetivo do projeto. No desenvolvimento, priorizo código limpo, componentes reutilizáveis, boa experiência de uso e uma estrutura que permita o produto crescer sem virar bagunça.",
+        "Antes de sair codando, gosto de entender o problem, o usuário e o objetivo do projeto. No desenvolvimento, priorizo código limpo, componentes reutilizáveis, boa experiência de uso e uma estrutura que permita o produto crescer sem virar bagunça.",
       tags: ["Código limpo", "Arquitetura", "Performance", "Usabilidade", "Produto"],
     },
 
@@ -212,7 +211,7 @@ function BackgroundGlow() {
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_18%,rgba(120,119,198,0.10),transparent_30%),radial-gradient(circle_at_16%_82%,rgba(216,143,103,0.07),transparent_28%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:88px_88px] opacity-20" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-size-[88px_88px] opacity-20" />
     </div>
   );
 }
@@ -448,28 +447,28 @@ function Hero({ content }: { content: typeof COPY.pt | typeof COPY.en }) {
         </Reveal>
 
         <Reveal delay={150} className="relative mx-auto w-full max-w-sm lg:max-w-md">
-  <div className="relative">
-    <div className="overflow-hidden rounded-[1.75rem] border border-border bg-card/50 p-2 backdrop-blur">
-      <Image
-        src={portrait}
-        alt="Pedro Passos"
-        width={420}
-        height={520}
-        priority
-        className="h-[440px] w-full rounded-[1.25rem] object-cover object-center sm:h-[480px]"
-      />
-    </div>
+          <div className="relative">
+            <div className="overflow-hidden rounded-[1.75rem] border border-border bg-card/50 p-2 backdrop-blur">
+              <Image
+                src={portrait}
+                alt="Pedro Passos"
+                width={420}
+                height={520}
+                priority
+                className="h-110 w-full rounded-[1.25rem] object-cover object-center sm:h-120"
+              />
+            </div>
 
-    <div className="absolute -bottom-5 left-5 rounded-2xl border border-border bg-background/85 px-4 py-3 shadow-2xl backdrop-blur">
-      <p className="font-display text-xl font-bold text-foreground">
-        {content.hero.metricNumber}
-      </p>
-      <p className="text-[10px] uppercase tracking-widest text-muted-foreground">
-        {content.hero.metricLabel}
-      </p>
-    </div>
-  </div>
-</Reveal>
+            <div className="absolute -bottom-5 left-5 rounded-2xl border border-border bg-background/85 px-4 py-3 shadow-2xl backdrop-blur">
+              <p className="font-display text-xl font-bold text-foreground">
+                {content.hero.metricNumber}
+              </p>
+              <p className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                {content.hero.metricLabel}
+              </p>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -752,8 +751,6 @@ function getProjects(lang: Lang): Project[] {
         tags: ["Next.js", "Tailwind", "Auth"],
         image: "/projects/dashboard.png",
       },
-      
-      
     ];
   }
 
@@ -770,7 +767,6 @@ function getProjects(lang: Lang): Project[] {
       tags: ["React", "TypeScript", "UI"],
       image: "/projects/menu-digital.png",
     },
-    
     {
       title: "Novo projeto em desenvolvimento",
       desc: "Estou organizando este case para mostrar melhor o processo, as decisões de interface e a estrutura técnica usada no projeto.",
@@ -825,11 +821,7 @@ function Projects({
                   </div>
 
                   <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-white">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="h-32 w-full object-contain object-center transition-transform duration-500 group-hover:scale-[1.02]"
-                    />
+                    
                   </div>
 
                   <p className="mt-4 text-sm leading-6 text-muted-foreground">
@@ -863,14 +855,48 @@ function Projects({
 
 function Contact({ content }: { content: typeof COPY.pt | typeof COPY.en }) {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
 
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
-    e.currentTarget.reset();
+  const form = e.currentTarget; // salva antes do await
+  setLoading(true);
+
+  const formData = new FormData(form);
+
+  const data = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    message: formData.get("message"),
   };
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      setSent(true);
+      form.reset();
+
+      setTimeout(() => setSent(false), 4000);
+      return;
+    }
+
+    const errorData = await response.json().catch(() => ({}));
+    alert(errorData.error || "Ocorreu um erro ao enviar a mensagem. Tente novamente.");
+  } catch (error) {
+    console.error("Erro capturado no fetch do contato:", error);
+    alert("Erro ao enviar a mensagem. Tente novamente.");
+  } finally {
+    setLoading(false);
+  }
+}
 
   return (
     <section id="contato" className="relative py-24">
@@ -926,10 +952,11 @@ function Contact({ content }: { content: typeof COPY.pt | typeof COPY.en }) {
 
               <button
                 type="submit"
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-foreground px-6 py-3.5 font-semibold text-background transition-transform hover:scale-[1.01] sm:w-auto"
+                disabled={loading}
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-foreground px-6 py-3.5 font-semibold text-background transition-transform hover:scale-[1.01] sm:w-auto disabled:opacity-70 disabled:hover:scale-100"
               >
-                {sent ? content.contact.sent : content.contact.send}
-                {!sent && <ArrowRight className="h-4 w-4" />}
+                {sent ? content.contact.sent : loading ? "Enviando..." : content.contact.send}
+                {!sent && !loading && <ArrowRight className="h-4 w-4" />}
               </button>
             </form>
           </Reveal>
