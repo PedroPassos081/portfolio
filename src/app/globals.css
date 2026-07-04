@@ -19,8 +19,9 @@
 
 .text-gradient {
   background: linear-gradient(135deg, oklch(0.65 0.24 270), oklch(0.60 0.27 305));
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .glow-shadow {
