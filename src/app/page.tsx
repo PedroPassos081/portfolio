@@ -61,7 +61,7 @@ const COPY = {
         "Graduado em Análise e Desenvolvimento de Sistemas pela UNIFG, com pós-graduação em Desenvolvimento Full-Stack pela FIAP. Aprendizado contínuo faz parte da minha rotina de trabalho.",
       workTitle: "Como eu trabalho",
       work:
-        "Antes de sair codando, gosto de entender o problem, o usuário e o objetivo do projeto. No desenvolvimento, priorizo código limpo, componentes reutilizáveis, boa experiência de uso e uma estrutura que permita o produto crescer sem virar bagunça.",
+        "Antes de sair codando, gosto de entender o problema, o usuário e o objetivo do projeto. No desenvolvimento, priorizo código limpo, componentes reutilizáveis, boa experiência de uso e uma estrutura que permita o produto crescer sem virar bagunça.",
       tags: ["Código limpo", "Arquitetura", "Performance", "Usabilidade", "Produto"],
     },
 
@@ -74,7 +74,7 @@ const COPY = {
 
     projects: {
       label: "Projetos",
-      title: "Projetos que mostram como penso interface, estrutura e produto.",
+      title: "Projetos que conectam design, código e experiência.",
       description:
         "Uma seleção de trabalhos e estudos que reúnem frontend, backend, organização de código e experiência do usuário.",
       details: "Ver detalhes",
@@ -150,7 +150,7 @@ const COPY = {
 
     projects: {
       label: "Projects",
-      title: "Projects that show how I think about interface, structure and product.",
+      title: "Projects that connect design, code and experience.",
       description:
         "A selection of works and studies combining frontend, backend, code organization and user experience.",
       details: "View details",
@@ -722,56 +722,62 @@ type Project = {
   desc: string;
   tags: string[];
   image: string;
+  liveUrl?: string;
+  codeUrl?: string;
 };
 
 function getProjects(lang: Lang): Project[] {
   if (lang === "en") {
-    return [
-      {
-        title: "Veterinary clinic system",
-        desc: "Web application for patient records, appointments and appointment history.",
-        tags: ["Next.js", "Node.js", "PostgreSQL"],
-        image: "/projects/vet-dev.png",
-      },
-      {
-        title: "Digital menu for restaurants",
-        desc: "Responsive interface for product browsing, category organization and order flow.",
-        tags: ["React", "TypeScript", "UI"],
-        image: "/projects/menu-digital.png",
-      },
-      {
-        title: "Memory game",
-        desc: "Study project focused on state management, reusable components and interaction logic.",
-        tags: ["React", "TypeScript", "Sass"],
-        image: "/projects/jogo-memoria.png",
-      },
-      {
-        title: "Admin dashboard",
-        desc: "Panel with authentication, metrics visualization and initial structure for a SaaS product.",
-        tags: ["Next.js", "Tailwind", "Auth"],
-        image: "/projects/dashboard.png",
-      },
-    ];
-  }
+  return [
+    {
+      title: "Vet-Dev veterinary clinic",
+      desc: "Web application for a veterinary clinic, with a modern, responsive interface focused on clearly presenting services.",
+      tags: ["Next.js", "TypeScript", "Tailwind", "Strapi"],
+      image: "/projects/vet-dev.png",
+      liveUrl: "https://vet-dev-two.vercel.app/",
+      codeUrl: "https://github.com/PedroPassos081/Vet-Dev",
+    },
+    {
+      title: "Susana Lourenço clinic website",
+      desc: "Institutional website developed for a clinic, focused on service presentation, clear navigation, responsive design and professional patient acquisition.",
+      tags: ["React", "TypeScript", "Tailwind"],
+      image: "/projects/susana.png",
+      liveUrl: "https://susanalourenco.com/",
+      codeUrl: "https://github.com/PedroPassos081/Clinica-Susana",
+    },
+    {
+      title: "Luma-agenda",
+      desc: "Web system in development for school management, with an administrative dashboard, Prisma database structure and internal modules for routine organization.",
+      tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+      image: "/projects/luma-agenda.png",
+      codeUrl: "https://github.com/PedroPassos081/Luma-Agenda",
+    },
+  ];
+}
 
   return [
     {
-      title: "Lading page clínica veterinária",
-      desc: "Aplicação web para clínica de pacientes, agendamentos e histórico de atendimentos.",
-      tags: ["Next.js", "Node.js", "PostgreSQL"],
+      title: "Vet-Dev clínica veterinária",
+      desc: "Aplicação web para clínica veterinária, com interface moderna, responsiva e foco em apresentação clara dos serviços.",
+      tags: ["Next.js", "TypeScript", "Tailwind", "Strapi"],
       image: "/projects/vet-dev.png",
+      liveUrl: "https://vet-dev-two.vercel.app/",
+      codeUrl: "https://github.com/PedroPassos081/Vet-Dev",
     },
-    {
-      title: "Cardápio digital para restaurantes",
-      desc: "Interface responsiva para consulta de produtos, organização por categorias e fluxo de pedido.",
-      tags: ["React", "TypeScript", "UI"],
-      image: "/projects/menu-digital.png",
+     {
+      title: "Susana Lourenco",
+      desc: "Site institucional desenvolvido para uma clínica, com foco em apresentação dos serviços, navegação clara, design responsivo e experiência profissional para captação de pacientes.",
+      tags: ["React", "TypeScript", "Tailwind"],
+      image: "/projects/susana.png",
+      liveUrl: "https://susanalourenco.com/",
+      codeUrl: "https://github.com/PedroPassos081/Clinica-Susana",
     },
-    {
-      title: "Novo projeto em desenvolvimento",
-      desc: "Estou organizando este case para mostrar melhor o processo, as decisões de interface e a estrutura técnica usada no projeto.",
-      tags: ["Em breve", "Case study", "UI"],
-      image: "/projects/placeholder.png",
+     {
+      title: "Dashboard escolar",
+      desc: "Sistema web em desenvolvimento para gestão escolar, com dashboard administrativo, estrutura de banco de dados com Prisma e módulos internos para organização da rotina escolar.",
+      tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+      image: "/projects/luma-agenda.png",
+      codeUrl: "https://github.com/PedroPassos081/Luma-Agenda",
     },
   ];
 }
@@ -803,50 +809,71 @@ function Projects({
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project, index) => (
-            <Reveal key={project.title} delay={index * 80}>
-              <a
-                href="#"
-                className="group relative block h-full overflow-hidden rounded-3xl border border-border bg-card/35 p-4 transition-all hover:-translate-y-1 hover:border-foreground/30"
-              >
-                <div className="relative flex h-full flex-col">
-                  <div className="flex items-start justify-between gap-4">
-                    <h3 className="max-w-md font-display text-lg font-semibold sm:text-xl">
-                      {project.title}
-                    </h3>
+         {projects.map((project, index) => (
+  <Reveal key={project.title} delay={index * 80}>
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card/35 p-4 transition-all hover:-translate-y-1 hover:border-foreground/30">
+      <div className="flex items-start justify-between gap-4">
+        <h3 className="max-w-md font-display text-lg font-semibold sm:text-xl">
+          {project.title}
+        </h3>
 
-                    <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-border bg-background/60 text-muted-foreground transition-all group-hover:border-foreground/40 group-hover:text-foreground">
-                      <ExternalLink className="h-4 w-4" />
-                    </span>
-                  </div>
+        <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-border bg-background/60 text-muted-foreground transition-all group-hover:border-foreground/40 group-hover:text-foreground">
+          <ExternalLink className="h-4 w-4" />
+        </span>
+      </div>
 
-                  <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-white">
-                    
-                  </div>
+      <div className="relative mt-4 aspect-video overflow-hidden rounded-2xl border border-border bg-background/60">
+        <Image
+          src={project.image}
+          alt={`Preview do projeto ${project.title}`}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
 
-                  <p className="mt-4 text-sm leading-6 text-muted-foreground">
-                    {project.desc}
-                  </p>
+      <p className="mt-4 text-sm leading-6 text-muted-foreground">
+        {project.desc}
+      </p>
 
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full border border-border bg-accent/20 px-3 py-1 text-xs text-foreground"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+      <div className="mt-5 flex flex-wrap gap-2">
+        {project.tags.map((tag) => (
+          <span
+            key={tag}
+            className="rounded-full border border-border bg-accent/20 px-3 py-1 text-xs text-foreground"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
 
-                  <div className="mt-6 flex items-center gap-2 text-sm font-medium text-foreground opacity-0 transition-opacity group-hover:opacity-100">
-                    {content.projects.details}
-                    <ArrowRight className="h-4 w-4" />
-                  </div>
-                </div>
-              </a>
-            </Reveal>
-          ))}
+      <div className="mt-auto flex translate-y-3 flex-wrap gap-3 pt-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+        {project.liveUrl && (
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-4 py-2 text-sm font-semibold text-background transition-transform hover:scale-[1.02]"
+          >
+            Ver site
+            <ExternalLink className="h-4 w-4" />
+          </a>
+        )}
+
+        {project.codeUrl && (
+          <a
+            href={project.codeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background/60 px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:border-foreground/40"
+          >
+            Ver código
+            <Code2 className="h-4 w-4" />
+          </a>
+        )}
+      </div>
+    </article>
+  </Reveal>
+))}
         </div>
       </div>
     </section>
